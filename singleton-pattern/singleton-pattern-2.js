@@ -28,12 +28,12 @@ function User(firstName, lastName) {
         return this.firstName + ' ' + this.lastName;
     }
 
-    User.instance = this;
+    this.instance = this;
 }
 
 var me = new User('Carlos', 'Matheu');
 console.log(me.getFullName());
-User.instance = '';
+
 
 var me2 = new User('Pepe', 'Papapa');
 console.log(me2.getFullName()); // returns the first instance
