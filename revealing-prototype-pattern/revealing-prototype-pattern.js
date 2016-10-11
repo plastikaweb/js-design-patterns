@@ -14,8 +14,7 @@ var Calculator = function (eq) {
 };
 
 Calculator.prototype = function () {
-    // functions
-
+    // functions (exposed)
     var add = function (x, y) {
             var result = x + y;
             print.call(this, result);
@@ -24,6 +23,8 @@ Calculator.prototype = function () {
             var result = x - y;
             print.call(this, result);
         },
+        
+        // private function
         print = function (result) {
             this.eqCtl.innerHTML = result;
             console.log(result);
