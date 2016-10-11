@@ -12,7 +12,7 @@ var calculator = function (eq) {
             var result = x - y;
             eqCtl.innerHTML = result;
             console.log(result);
-        }
+        };
         //public
     return {
         add: add,
