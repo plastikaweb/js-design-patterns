@@ -15,13 +15,16 @@ var Calculator = function (eq) {
 
 Calculator.prototype = function () {
     // functions
+
     var add = function (x, y) {
             var result = x + y;
-            this.eqCtl.innerHTML = result;
-            console.log(result);
+            print.call(this, result);
         },
         substract = function (x, y) {
             var result = x - y;
+            print.call(this, result);
+        },
+        print = function (result) {
             this.eqCtl.innerHTML = result;
             console.log(result);
         };
@@ -31,3 +34,6 @@ Calculator.prototype = function () {
         substract: substract
     };
 }();
+
+var calc = new Calculator('output');
+calc.add(3, 5);
